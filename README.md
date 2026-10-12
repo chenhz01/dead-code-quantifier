@@ -2,6 +2,8 @@
 
 Quantifies unreferenced definitions in Python code with two confidence modes: a conservative mode that only reports what is provably dead, and an aggressive mode that also flags unused variables, methods, and decorated defs. Pure `ast`, no execution, no dependencies.
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 Dead code accumulates invisibly: functions nobody calls, constants nobody reads, methods orphaned by refactors. Full dead-code elimination requires whole-program analysis most teams don't have; meanwhile "just delete it" decisions stall because nobody can say how much code is actually affected. What is missing is a *measurement* tool with an explicit confidence dial, not another noisy linter.
